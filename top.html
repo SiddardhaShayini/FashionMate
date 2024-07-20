@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionmate Top Selection</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2em;
+        }
+        header {
+            width: 100%;
+            background-color: #444444;
+            padding: 1em 0;
+            text-align: center;
+            background: linear-gradient(45deg, #444444, #66fcf1);
+        }
+        header h1 {
+            color: #66fcf1;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 2em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 1em;
+        }
+        .grid-item {
+            background: #333333;
+            padding: 1em;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .grid-item img {
+            width: 100%;
+            max-width: 100px;
+            border-radius: 10px;
+        }
+        .grid-item .item-name {
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fashionmate</h1>
+    </header>
+    <div class="container">
+        <h2>Select a Top</h2>
+        <div class="grid">
+            <div class="grid-item" onclick="selectItem('Baja Hoodie','https://i.postimg.cc/tg4CvKgF/bajahoodie.png')">
+                <img src="https://i.postimg.cc/tg4CvKgF/bajahoodie.png" alt="Baja Hoodie">
+                <div class="item-name">Baja Hoodie</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('baseballtee','https://i.postimg.cc/zBLD8TKB/baseballtee.png')">
+                <img src="https://i.postimg.cc/zBLD8TKB/baseballtee.png" alt="Base Ball Tee">
+                <div class="item-name">Base Ball Tee</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('bretonsweater','https://i.postimg.cc/Z5VJNwLn/bretonsweater.png')">
+                <img src="https://i.postimg.cc/Z5VJNwLn/bretonsweater.png" alt="Breton Sweater">
+                <div class="item-name">Breton Sweater</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('cableknitcardigan','https://i.postimg.cc/QCGDDwj4/cableknitcardigan.png')">
+                <img src="https://i.postimg.cc/QCGDDwj4/cableknitcardigan.png" alt="Cable Knit Cardigan">
+                <div class="item-name">Cable Knit Cardigan</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('cableknitcrewnecksweater','https://i.postimg.cc/fycNRCLw/cableknitcrewnecksweater.png')">
+                <img src="https://i.postimg.cc/fycNRCLw/cableknitcrewnecksweater.png" alt="Cable Knit Crew Neck Sweater">
+                <div class="item-name">Cable Knit Crew Neck Sweater</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('cableknitshawlcollarcardigan','https://i.postimg.cc/2jhmGkxP/cableknitshawlcollarcardigan.png')">
+                <img src="https://i.postimg.cc/2jhmGkxP/cableknitshawlcollarcardigan.png" alt="Cable Knit Shawl Collar Cardigan">
+                <div class="item-name">Cable Knit Shawl Collar Cardigan</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('cableknitshawlcollarsweater','https://i.postimg.cc/15SSYkC4/cableknitshawlcollarsweater.png')">
+                <img src="https://i.postimg.cc/15SSYkC4/cableknitshawlcollarsweater.png" alt="Cable Knit Shawl Collar Sweater">
+                <div class="item-name">Cable Knit Shawl Collar Sweater</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('campcollarshirt','https://i.postimg.cc/m2S4xmJj/campcollarshirt.png')">
+                <img src="https://i.postimg.cc/m2S4xmJj/campcollarshirt.png" alt="Camp Collar Shirt">
+                <div class="item-name">Camp Collar Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('caradigan','https://i.postimg.cc/ZqXtP2vb/caradigan.png')">
+                <img src="https://i.postimg.cc/ZqXtP2vb/caradigan.png" alt="Caradigan">
+                <div class="item-name">Caradigan</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('collaredsweater','https://i.postimg.cc/MpGhCqyZ/collaredsweater.png')">
+                <img src="https://i.postimg.cc/MpGhCqyZ/collaredsweater.png" alt="Collared Sweater">
+                <div class="item-name">Collared Sweater</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('corduroyshirt','https://i.postimg.cc/bv7WSn4d/corduroyshirt.png')">
+                <img src="https://i.postimg.cc/bv7WSn4d/corduroyshirt.png" alt="Corduroy Shirt">
+                <div class="item-name">Corduroy Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('crewnecksweatshirt','https://i.postimg.cc/MT147T85/crewnecksweatshirt.png')">
+                <img src="https://i.postimg.cc/MT147T85/crewnecksweatshirt.png" alt="Crew Neck Sweat Shirt">
+                <div class="item-name">Crew Neck Sweat Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('fullzipsweater','https://i.postimg.cc/Bbqh2BpZ/fullzipsweater.png')">
+                <img src="https://i.postimg.cc/Bbqh2BpZ/fullzipsweater.png" alt="Full Zip Sweater">
+                <div class="item-name">Full Zip Sweater</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('henley','https://i.postimg.cc/sfcHsbfM/henley.png')">
+                <img src="https://i.postimg.cc/sfcHsbfM/henley.png" alt="Henley">
+                <div class="item-name">Henley</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('hoodedshirt','https://i.postimg.cc/rwdfGm14/hoodedshirt.png')">
+                <img src="https://i.postimg.cc/rwdfGm14/hoodedshirt.png" alt="Hooded Shirt">
+                <div class="item-name">Hooded Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('hoodie','https://i.postimg.cc/JhZKg2d4/hoodie.png')">
+                <img src="https://i.postimg.cc/JhZKg2d4/hoodie.png" alt="Hoodie">
+                <div class="item-name">Hoodie</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('knittedblazer','https://i.postimg.cc/d196QTYb/knittedblazer.png')">
+                <img src="https://i.postimg.cc/d196QTYb/knittedblazer.png" alt="Knitted Blazer">
+                <div class="item-name">Knitted Blazer</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('knittedpolo','https://i.postimg.cc/Wzbndbph/knittedpolo.png')">
+                <img src="https://i.postimg.cc/Wzbndbph/knittedpolo.png" alt="Knitted Polo">
+                <div class="item-name">Knitted Polo</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('knittedshirt','https://i.postimg.cc/J06QZVtK/knittedshirt.png')">
+                <img src="https://i.postimg.cc/J06QZVtK/knittedshirt.png" alt="Knitted Shirt">
+                <div class="item-name">Knitted Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('longsleevepolo','https://i.postimg.cc/L6WTspc8/longsleevepolo.png')">
+                <img src="https://i.postimg.cc/L6WTspc8/longsleevepolo.png" alt="Long Sleeve Polo">
+                <div class="item-name">Long Sleeve Polo</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('longsleevet-shirt','https://i.postimg.cc/4xh170Gb/longsleevet-shirt.png')">
+                <img src="https://i.postimg.cc/4xh170Gb/longsleevet-shirt.png" alt="Long Sleeve T-Shirt">
+                <div class="item-name">Long Sleeve T-Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('mandarincollarpopovershirt','https://i.postimg.cc/KYPrQgR1/mandarincollarpopovershirt.png')">
+                <img src="https://i.postimg.cc/KYPrQgR1/mandarincollarpopovershirt.png" alt="Mandarin Collar Pop Over Shirt">
+                <div class="item-name">Mandarin Collar Pop Over Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('militaryshirt','https://i.postimg.cc/RFv1YVHX/militaryshirt.png')">
+                <img src="https://i.postimg.cc/RFv1YVHX/militaryshirt.png" alt="Military Shirt">
+                <div class="item-name">Military Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('militarysweater','https://i.postimg.cc/brJxzCLn/militarysweater.png')">
+                <img src="https://i.postimg.cc/brJxzCLn/militarysweater.png" alt="Military Sweater">
+                <div class="item-name">Military Sweater</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('pockett-shirt','https://i.postimg.cc/NfK6SnKq/pockett-shirt.png')">
+                <img src="https://i.postimg.cc/NfK6SnKq/pockett-shirt.png" alt="Pocket T-Shirt">
+                <div class="item-name">Pocket T-Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('poloshirt','https://i.postimg.cc/65FrXhZ7/poloshirt.png')">
+                <img src="https://i.postimg.cc/65FrXhZ7/poloshirt.png" alt="Polo Shirt">
+                <div class="item-name">Polo Shirt</div>              
+            </div><div class="grid-item" onclick="selectItem('rugbyshirt','https://i.postimg.cc/L8fz6Zkx/rugbyshirt.png')">
+                <img src="https://i.postimg.cc/L8fz6Zkx/rugbyshirt.png" alt="Rugby Shirt">
+                <div class="item-name">Rugby Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('shawlcollarcardigan','https://i.postimg.cc/HxSMP0Hk/shawlcollarcardigan.png')">
+                <img src="https://i.postimg.cc/HxSMP0Hk/shawlcollarcardigan.png" alt="Shawl Collar Cardigan">
+                <div class="item-name">Shawl Collar Cardigan</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('shawlcollarsweater','https://i.postimg.cc/mkJHTbPx/shawlcollarsweater.png')">
+                <img src="https://i.postimg.cc/mkJHTbPx/shawlcollarsweater.png" alt="Shawl Collar Sweater">
+                <div class="item-name">Shawl Collar Sweater</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('shirt','https://i.postimg.cc/v8N9rv3P/shirt.png')">
+                <img src="https://i.postimg.cc/v8N9rv3P/shirt.png" alt="Shirt">
+                <div class="item-name">Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('shortsleeveshirt','https://i.postimg.cc/QxK70Wzj/shortsleeveshirt.png')">
+                <img src="https://i.postimg.cc/QxK70Wzj/shortsleeveshirt.png" alt="Short Sleeve Shirt">
+                <div class="item-name">Short Sleeve Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('hoot-shirtdie','https://i.postimg.cc/wjc7G5QY/t-shirt.png')">
+                <img src="https://i.postimg.cc/wjc7G5QY/t-shirt.png" alt="T-Shirt">
+                <div class="item-name">T-Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('tanktop','https://i.postimg.cc/jjtJx3Sj/tanktop.png')">
+                <img src="https://i.postimg.cc/jjtJx3Sj/tanktop.png" alt="Tank Top">
+                <div class="item-name">Tank Top</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('tennisvest','https://i.postimg.cc/76LG7C78/tennisvest.png')">
+                <img src="https://i.postimg.cc/76LG7C78/tennisvest.png" alt="Tennis Vest">
+                <div class="item-name">Tennis Vest</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('trackjacket','https://i.postimg.cc/QC9F4R0f/trackjacket.png')">
+                <img src="https://i.postimg.cc/QC9F4R0f/trackjacket.png" alt="Track Jacket">
+                <div class="item-name">Track Jacket</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('shirtunicshirtt','https://i.postimg.cc/XY0rL1Fg/tunicshirt.png')">
+                <img src="https://i.postimg.cc/XY0rL1Fg/tunicshirt.png" alt="Tunic Shirt">
+                <div class="item-name">Tunic Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('zipcardiganvest','https://i.postimg.cc/xC7Cz6nM/zipcardiganvest.png')">
+                <img src="https://i.postimg.cc/xC7Cz6nM/zipcardiganvest.png" alt="Zip Cardigan Vest">
+                <div class="item-name">Zip Cardigan Vest</div>              
+            </div>
+        </div>
+    </div>
+    <script>
+        function selectItem(itemName, itemImage) {
+        const selectedItem = { name: itemName, image: itemImage };
+        sessionStorage.setItem('selectedTop', JSON.stringify(selectedItem));
+        window.location.href = 'final.html';
+    }
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Set the selected top image
+    var selectedTopImageURL = getUrlParameter('selectedTopImage');
+    if (selectedTopImageURL) {
+        document.getElementById('selectedTopImage').src = selectedTopImageURL;
+    }
+    </script>
+</body>
+</html>

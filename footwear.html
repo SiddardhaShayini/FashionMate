@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionmate Footwear Selection</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2em;
+        }
+        header {
+            width: 100%;
+            background-color: #444444;
+            padding: 1em 0;
+            text-align: center;
+            background: linear-gradient(45deg, #444444, #66fcf1);
+        }
+        header h1 {
+            color: #66fcf1;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 2em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 1em;
+        }
+        .grid-item {
+            background: #333333;
+            padding: 1em;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .grid-item img {
+            width: 100%;
+            max-width: 100px;
+            border-radius: 10px;
+        }
+        .grid-item .item-name {
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fashionmate</h1>
+    </header>
+    <div class="container">
+        <h2>Select a Footwear</h2>
+        <div class="grid">
+            <div class="grid-item" onclick="selectItem('athleticsneakers','https://i.postimg.cc/vBpYBDtv/athleticsneakers.png')">
+                <img src="https://i.postimg.cc/vBpYBDtv/athleticsneakers.png" alt="Athletic Sneakers">
+                <div class="item-name">Athletic Sneakers</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('blazerhigh','https://i.postimg.cc/xTGfffJK/blazerhigh.png')">
+                <img src="https://i.postimg.cc/xTGfffJK/blazerhigh.png" alt="Blazer High">
+                <div class="item-name">Blazer High</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('boatshoes','https://i.postimg.cc/WbcpcF3N/boatshoes.png')">
+                <img src="https://i.postimg.cc/WbcpcF3N/boatshoes.png" alt="Boat Shoes">
+                <div class="item-name">Boat Shoes</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('brogueboots','https://i.postimg.cc/MGHqm1sD/brogueboots.png')">
+                <img src="https://i.postimg.cc/MGHqm1sD/brogueboots.png" alt="Brogue Boots">
+                <div class="item-name">Brogue Boots</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('brogues','https://i.postimg.cc/ZqQZ702h/brogues.png')">
+                <img src="https://i.postimg.cc/ZqQZ702h/brogues.png" alt="Brogues">
+                <div class="item-name">Brogues</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('bucks','https://i.postimg.cc/k4tCkqPR/bucks.png')">
+                <img src="https://i.postimg.cc/k4tCkqPR/bucks.png" alt="Bucks">
+                <div class="item-name">Bucks</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('campus','https://i.postimg.cc/rwnLsK8t/campus.png')">
+                <img src="https://i.postimg.cc/rwnLsK8t/campus.png" alt="Campus">
+                <div class="item-name">Campus</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('lowsneakers','https://i.postimg.cc/bvc9QRNX/lowsneakers.png')">
+                <img src="https://i.postimg.cc/bvc9QRNX/lowsneakers.png" alt="Low Sneakers">
+                <div class="item-name">Low Sneakers</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('highsneakers','https://i.postimg.cc/4NxLdwnB/highsneakers.png')">
+                <img src="https://i.postimg.cc/4NxLdwnB/highsneakers.png" alt="High Sneakers">
+                <div class="item-name">High Sneakers</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('clogs','https://i.postimg.cc/kGF0m51G/clogs.png')">
+                <img src="https://i.postimg.cc/kGF0m51G/clogs.png" alt="Clogs">
+                <div class="item-name">Clogs</div>
+            </div>  
+            <div class="grid-item" onclick="selectItem('cowboyboots','https://i.postimg.cc/mrzKrjX0/cowboyboots.png')">
+                <img src="https://i.postimg.cc/mrzKrjX0/cowboyboots.png" alt="Cow Boy Boots">
+                <div class="item-name">Cow Boy Boots</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('crocs','https://i.postimg.cc/9XtKzrbF/crocs.png')">
+                <img src="https://i.postimg.cc/9XtKzrbF/crocs.png" alt="Crocs">
+                <div class="item-name">Crocs</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('desertboots','https://i.postimg.cc/6q0mPmqG/desertboots.png')">
+                <img src="https://i.postimg.cc/6q0mPmqG/desertboots.png" alt="Desert Boots">
+                <div class="item-name">Desert Boots</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('flipflops','https://i.postimg.cc/GpySR29R/flipflops.png')">
+                <img src="https://i.postimg.cc/GpySR29R/flipflops.png" alt="Flip Flops">
+                <div class="item-name">Flip Flops</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('hikingboots','https://i.postimg.cc/157WN6qP/hikingboots.png')">
+                <img src="https://i.postimg.cc/157WN6qP/hikingboots.png" alt="Hiking Boots">
+                <div class="item-name">Hiking Boots</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('loafer','https://i.postimg.cc/qBjw9nQn/loafer.png')">
+                <img src="https://i.postimg.cc/qBjw9nQn/loafer.png" alt="Loafer">
+                <div class="item-name">Loafer</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('slides','https://i.postimg.cc/4xC9MxCV/slides.png')">
+                <img src="https://i.postimg.cc/4xC9MxCV/slides.png" alt="Slides">
+                <div class="item-name">Slides</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('runningshoes','https://i.postimg.cc/q7T2tMj4/runningshoes.png')">
+                <img src="https://i.postimg.cc/q7T2tMj4/runningshoes.png" alt="Running Shoes">
+                <div class="item-name">Running Shoes</div>
+            </div>
+         </div>
+    </div>
+    <script>
+        function selectItem(itemName, itemImage) {
+        const selectedItem = { name: itemName, image: itemImage };
+        sessionStorage.setItem('selectedFootwear', JSON.stringify(selectedItem));
+        window.location.href = 'final.html';
+    }
+        function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Set the selected top image
+    var selectedTopImageURL = getUrlParameter('selectedTopImage');
+    if (selectedTopImageURL) {
+        document.getElementById('selectedTopImage').src = selectedTopImageURL;
+    }
+    </script>
+</body>
+</html>

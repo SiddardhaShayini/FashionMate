@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionmate Bottom Selection</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2em;
+        }
+        header {
+            width: 100%;
+            background-color: #444444;
+            padding: 1em 0;
+            text-align: center;
+            background: linear-gradient(45deg, #444444, #66fcf1);
+        }
+        header h1 {
+            color: #66fcf1;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 2em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 1em;
+        }
+        .grid-item {
+            background: #333333;
+            padding: 1em;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .grid-item img {
+            width: 100%;
+            max-width: 100px;
+            border-radius: 10px;
+        }
+        .grid-item .item-name {
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fashionmate</h1>
+    </header>
+    <div class="container">
+        <h2>Select a Bottom</h2>
+        <div class="grid">
+            <div class="grid-item" onclick="selectItem('Boot Cut Jeans','https://i.postimg.cc/L4yYVg41/bootcutjeans.png')">
+                <img src="https://i.postimg.cc/L4yYVg41/bootcutjeans.png" alt="Boot Cut Jeans">
+                <div class="item-name">Boot Cut Jeans</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Leggins','https://i.postimg.cc/YqWrmvvk/leggins.png')">
+                <img src="https://i.postimg.cc/YqWrmvvk/leggins.png" alt="Leggins">
+                <div class="item-name">Leggins</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Skinny Jeans','https://i.postimg.cc/j2NjK2Ns/skinnyjeans.png')">
+                <img src="https://i.postimg.cc/j2NjK2Ns/skinnyjeans.png" alt="Skinny Jeans">
+                <div class="item-name">Skinny Jeans</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Straight Leg Jeans','https://i.postimg.cc/vZGmFQms/straightlegjeans.png')">
+                <img src="https://i.postimg.cc/vZGmFQms/straightlegjeans.png" alt="Straight Leg Jeans">
+                <div class="item-name">Straight Leg Jeans</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Distressed Jeans','https://i.postimg.cc/FRTRGwv4/distressedjeans.png')">
+                <img src="https://i.postimg.cc/FRTRGwv4/distressedjeans.png" alt="Distressed Jeans">
+                <div class="item-name">Distressed Jeans</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Palazzo Pants','https://i.postimg.cc/rstkWHFg/palazzopants.png')">
+                <img src="https://i.postimg.cc/rstkWHFg/palazzopants.png" alt="Palazzo Pants">
+                <div class="item-name">Palazzo Pants</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Culottes','https://i.postimg.cc/43bnHmFn/culottes.png')">
+                <img src="https://i.postimg.cc/43bnHmFn/culottes.png" alt="Culottes">
+                <div class="item-name">Culottes</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Capri Pants','https://i.postimg.cc/QxwF2LTN/capripants.png')">
+                <img src="https://i.postimg.cc/QxwF2LTN/capripants.png" alt="Capri Pants">
+                <div class="item-name">Capri Pants</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Bermuda Shorts','https://i.postimg.cc/CKjnCvdh/bermudashorts.png')">
+                <img src="https://i.postimg.cc/CKjnCvdh/bermudashorts.png" alt="Bermuda Shorts">
+                <div class="item-name">Bermuda Shorts</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Pleated Skirt','https://i.postimg.cc/nhxXF40N/pleatedskirt.png')">
+                <img src='https://i.postimg.cc/nhxXF40N/pleatedskirt.png' alt="Pleated Skirt">
+                <div class="item-name">Pleated Skirt</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Pencil Skirt','https://i.postimg.cc/PfBLcsZX/pencilskirt.png')">
+                <img src="https://i.postimg.cc/PfBLcsZX/pencilskirt.png" alt="Pencil Skirt">
+                <div class="item-name">Pencil Skirt</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Trousers','https://i.postimg.cc/KYHcMBDG/trousers1.png')">
+                <img src="https://i.postimg.cc/KYHcMBDG/trousers1.png" alt="Trousers">
+                <div class="item-name">Trousers</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Wrap Skirt','https://i.postimg.cc/GtkbVNwt/wrapskirt.png')">
+                <img src="https://i.postimg.cc/GtkbVNwt/wrapskirt.png" alt="Wrap Skirt">
+                <div class="item-name">Wrap Skirt</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Maxi Skirt','https://i.postimg.cc/pLQPq3Q6/maxiskirt.png')">
+                <img src="https://i.postimg.cc/pLQPq3Q6/maxiskirt.png" alt="Maxi Skirt">
+                <div class="item-name">Maxi Skirt</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Mini Skirt','https://i.postimg.cc/FK9NqGDs/miniskirt.png')">
+                <img src="https://i.postimg.cc/FK9NqGDs/miniskirt.png" alt="Mini Skirt">
+                <div class="item-name">Mini Skirt</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('Shorts','https://i.postimg.cc/JnSh9Zs6/shorts1.png')">
+                <img src="https://i.postimg.cc/JnSh9Zs6/shorts1.png" alt="Shorts">
+                <div class="item-name">Shorts</div>
+            </div>
+        </div>
+    </div>
+    <script>
+         function selectItem(itemName, itemImage) {
+            const selectedItem = { name: itemName, image: itemImage };
+            sessionStorage.setItem('selectedBottom', JSON.stringify(selectedItem));
+            window.location.href = 'final1.html';
+        }
+          function getUrlParameter(name) {
+          name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+          var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+          var results = regex.exec(location.search);
+          return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+  
+      // Set the selected top image
+      var selectedTopImageURL = getUrlParameter('selectedTopImage');
+      if (selectedTopImageURL) {
+          document.getElementById('selectedTopImage').src = selectedTopImageURL;
+      }
+      </script>
+</body>
+</html>

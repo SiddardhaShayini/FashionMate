@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionmate</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background: #333333;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1em 0;
+            background-color: #444444; 
+            position: relative;
+            color: #ffffff;
+            text-align: center;
+            background: linear-gradient(45deg, #444444, #66fcf1);
+        }
+        header h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #66fcf1; /* Change color here */
+    animation: rainbow 2s linear infinite;
+}
+        
+        h2 {
+            text-align: center;
+            font-family: 'Georgia, serif';
+            color: #ffffff;
+            margin-bottom: 1em;
+            font-size: 2em;
+        }
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #e0e0e0;
+            font-size: 1.1em;
+        }
+        .gender-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5em;
+        }
+        .option {
+            cursor: pointer;
+            padding: 0.5em;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            text-align: center;
+            flex-grow: 1;
+            margin: 0 5px;
+            font-size: 1.1em;
+            background-color: #555555;
+            color: #e0e0e0;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .option img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+        }
+        .option.selected {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+        input[type="hidden"] {
+            display: none;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 0.7em 1.5em;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            background-color: #007BFF;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        @keyframes writeFashionmate {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                width: 0;
+                height: 0;
+                top: 50%;
+                left: 50%;
+            }
+        }
+
+        @keyframes sizeDecrease {
+            0% {
+                font-size: 12vw;
+            }
+            100% {
+                font-size: 3vw; /* End smaller */
+            }
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff0000; }
+            14% { color: #ff9900; }
+            28% { color: #ffff00; }
+            42% { color: #00ff00; }
+            56% { color: #00ffff; }
+            70% { color: #0000ff; }
+            84% { color: #9900ff; }
+            100% { color: #ff0000; }
+        }
+
+        .opening {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: writeFashionmate 5s forwards;
+        }
+
+        .opening h1 {
+            font-size: 12vw; /* Initial size */
+            animation: colorChange 5s infinite, sizeDecrease 5s forwards;
+        }
+        .quote {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            font-size: 1.2em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0.5em 0;
+            z-index: 1000;
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: linear-gradient(45deg, #1e1e1e, #333333, #1e1e1e, #333333);
+            background-size: 400% 400%;
+            animation: backgroundMove 10s infinite;
+        }
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .loading-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 30, 30, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .loading-animation::before {
+            content: '';
+            width: 50px;
+            height: 50px;
+            border: 5px solid #fff;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="opening">
+        <h1>FASHIONMATE</h1>
+    </div>
+    <div class="background-animation"></div>
+    <header>
+        <h1>Fashionmate</h1>
+    </header>
+    <div class="container" id="formContainer">
+        <form id="fashionmateForm" action="/submit" method="post">
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="gender-options">
+                    <div class="option" data-value="male">
+                        <img src="https://i.postimg.cc/tJVKm5P3/male.png" alt="Male">
+                        <div class="item-name">Male</div>
+                    </div>
+                    <div class="option" data-value="female">
+                        <img src="https://i.postimg.cc/4dR2xgh9/female.png" alt="Female">
+                        <div class="item-name">Female</div>
+                    </div>
+                </div>
+                <input type="hidden" id="gender" name="gender">
+                <div class="error" id="genderError"></div>
+            </div>
+        </form>
+        
+    </div>
+    <div class="quote">“See it, Select it, Style it – FashionMate makes every selection a sensation.”</div>
+    <script>
+        document.querySelectorAll('.gender-options .option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.gender-options .option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                document.getElementById('gender').value = this.getAttribute('data-value');
+                redirectToOptionsPage(this.getAttribute('data-value'));
+            });
+        });
+
+        function redirectToOptionsPage(gender) {
+            const loadingAnimation = document.createElement('div');
+            loadingAnimation.classList.add('loading-animation');
+            document.body.appendChild(loadingAnimation);
+
+            setTimeout(() => {
+                if (gender === 'male') {
+                    window.location.href = 'option_male.html';
+                } else if (gender === 'female') {
+                    window.location.href = 'option_female.html';
+                }
+            }, 300);
+        }
+
+        // Remove the opening graphic after the animation
+        document.querySelector('.opening').addEventListener('animationend', function() {
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

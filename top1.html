@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionmate Top Selection</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2em;
+        }
+        header {
+            width: 100%;
+            background-color: #444444;
+            padding: 1em 0;
+            text-align: center;
+            background: linear-gradient(45deg, #444444, #66fcf1);
+        }
+        header h1 {
+            color: #66fcf1;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 2em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 1em;
+        }
+        .grid-item {
+            background: #333333;
+            padding: 1em;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .grid-item img {
+            width: 100%;
+            max-width: 100px;
+            border-radius: 10px;
+        }
+        .grid-item .item-name {
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fashionmate</h1>
+    </header>
+    <div class="container">
+        <h2>Select a Top</h2>
+        <div class="grid">
+            <div class="grid-item" onclick="selectItem('Off Shoulder Top','https://i.postimg.cc/FRzmFRMM/offshouldertop.png')">
+                <img src="https://i.postimg.cc/FRzmFRMM/offshouldertop.png" alt="Off Shoulder Top">
+                <div class="item-name">Off Shoulder Top</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Peplum Blouse','https://i.postimg.cc/vHf1wqLW/peplumblouse.png')">
+                <img src="https://i.postimg.cc/vHf1wqLW/peplumblouse.png" alt="Peplum Blouse">
+                <div class="item-name">Peplum Blouse</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Bottom Up Blouse','https://i.postimg.cc/Nf5yCGLP/buttonupbouse.png')">
+                <img src="https://i.postimg.cc/Nf5yCGLP/buttonupbouse.png" alt="Bottom Up Blouse">
+                <div class="item-name">Bottom Up Blouse</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Graphic Tee','https://i.postimg.cc/fRYR1Vs5/graphictee.png')">
+                <img src="https://i.postimg.cc/fRYR1Vs5/graphictee.png" alt="Graphic Tee">
+                <div class="item-name">Graphic Tee</div>    
+            </div>
+            <div class="grid-item" onclick="selectItem('Crew Neck Tee','https://i.postimg.cc/Cx8RYvGG/crewnecktee.png')">
+                <img src="https://i.postimg.cc/Cx8RYvGG/crewnecktee.png" alt="Crew Neck Tee">
+                <div class="item-name">Crew Neck Tee</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('V-Neck Tee','https://i.postimg.cc/1Xx9WSdb/v-necktee.png')">
+                <img src="https://i.postimg.cc/1Xx9WSdb/v-necktee.png" alt="V-Neck Tee">
+                <div class="item-name">V-Neck Tee</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Basic Tee','https://i.postimg.cc/DZ6WH8qR/basictee.png')">
+                <img src="https://i.postimg.cc/DZ6WH8qR/basictee.png" alt="Basic Tee">
+                <div class="item-name">Basic Tee</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Wrap Top','https://i.postimg.cc/66R6872K/wraptop.png')">
+                <img src="https://i.postimg.cc/66R6872K/wraptop.png" alt="Wrap Top">
+                <div class="item-name">Wrap Top</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Henley Shirt','https://i.postimg.cc/pdZXX3pF/henleyshirt.png')">
+                <img src="https://i.postimg.cc/pdZXX3pF/henleyshirt.png" alt="Henley Shirt">
+                <div class="item-name">Henley Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Polo Shirt','https://i.postimg.cc/W17hhdyz/poloshirt.png')">
+                <img src="https://i.postimg.cc/W17hhdyz/poloshirt.png" alt="Polo Shirt">
+                <div class="item-name">Polo Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Sleeve Less Blouse','https://i.postimg.cc/gc6j3S7f/sleevelessblouse.png')">
+                <img src="https://i.postimg.cc/gc6j3S7f/sleevelessblouse.png" alt="Sleeve Less Blouse">
+                <div class="item-name">Sleeve Less Blouse</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Lace Top','https://i.postimg.cc/kGk7pmhk/lacetop.png')">
+                <img src="https://i.postimg.cc/kGk7pmhk/lacetop.png" alt="Lace Top">
+                <div class="item-name">Lace Top</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Halter Top','https://i.postimg.cc/43ZxGXNG/haltertop.png')">
+                <img src="https://i.postimg.cc/43ZxGXNG/haltertop.png" alt="Halter Top">
+                <div class="item-name">Halter Top</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Chiffon Blouse','https://i.postimg.cc/6QNyQdcD/chiffonblouse.png')">
+                <img src="https://i.postimg.cc/6QNyQdcD/chiffonblouse.png" alt="Chiffon Blouse">
+                <div class="item-name">Chiffon Blouse</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Bell Sleeve Top','https://i.postimg.cc/7hLCkw9h/bellsleevetop.png')">
+                <img src="https://i.postimg.cc/7hLCkw9h/bellsleevetop.png" alt="Bell Sleeve Top">
+                <div class="item-name">Bell Sleeve Top</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Dolman Sleeve Top','https://i.postimg.cc/FzqKXc1C/dolmansleevetop.png')">
+                <img src="https://i.postimg.cc/FzqKXc1C/dolmansleevetop.png" alt="Dolman Sleeve Top">
+                <div class="item-name">Dolman Sleeve Top</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Kaftan','https://i.postimg.cc/RFpSwf1C/kaftan.png')">
+                <img src="https://i.postimg.cc/RFpSwf1C/kaftan.png" alt="Kaftan">
+                <div class="item-name">Kaftan</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Track Jacket','https://i.postimg.cc/SxVxmwXz/trackjacket1.png')">
+                <img src="https://i.postimg.cc/SxVxmwXz/trackjacket1.png" alt="Track Jacket">
+                <div class="item-name">Track Jacket</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Turple Neck','https://i.postimg.cc/mD1LNkmQ/turtleneck1.png')">
+                <img src="https://i.postimg.cc/mD1LNkmQ/turtleneck1.png" alt="Turple Neck">
+                <div class="item-name">Turple Neck</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Base Ball Tee','https://i.postimg.cc/nL8QD8FS/baseballtee1.png')">
+                <img src="https://i.postimg.cc/nL8QD8FS/baseballtee1.png" alt="Base Ball Tee">
+                <div class="item-name">Base Ball Tee</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('longsleevet-shirt','https://i.postimg.cc/4xh170Gb/longsleevet-shirt.png')">
+                <img src="https://i.postimg.cc/4xh170Gb/longsleevet-shirt.png" alt="Long Sleeve T-Shirt">
+                <div class="item-name">Long Sleeve T-Shirt</div>              
+            </div>
+            <div class="grid-item" onclick="selectItem('Baja Hoodie','https://i.postimg.cc/BnPKbZ01/bajahoodie1.png')">
+                <img src="https://i.postimg.cc/BnPKbZ01/bajahoodie1.png" alt="Baja Hoodie">
+                <div class="item-name">Baja Hoodie</div>              
+            </div>
+        </div>
+    </div>
+    <script>
+         function selectItem(itemName, itemImage) {
+            const selectedItem = { name: itemName, image: itemImage };
+            sessionStorage.setItem('selectedTop', JSON.stringify(selectedItem));
+            window.location.href = 'final1.html';
+        }
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Set the selected top image
+    var selectedTopImageURL = getUrlParameter('selectedTopImage');
+    if (selectedTopImageURL) {
+        document.getElementById('selectedTopImage').src = selectedTopImageURL;
+    }
+    </script>
+</body>
+</html>

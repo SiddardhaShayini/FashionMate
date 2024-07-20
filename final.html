@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionmate Final Selection</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 2em;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #333;
+            border-radius: 10px;
+            margin: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .box img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+        .box:hover {
+            background-color: #555;
+            transform: scale(1.05);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .box-text {
+            font-size: 24px;
+            margin-top: 0.5em;
+        }
+        .button {
+            padding: 1em 2em;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0.5em 0;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        .reset-button {
+            background-color: #ff3b3b;
+            color: white;
+            margin-top: 2em;
+        }
+        .rainbow-button-1 {
+            background: linear-gradient(45deg, #2960E1, #ff4a28);
+            color: white;
+        }
+        .rainbow-button-2 {
+            background: linear-gradient(45deg, #2960E1, #ff4a28);
+            color: white;
+        }
+        .rainbow-button-3 {
+            background: linear-gradient(45deg, #2960E1, #ff4a28);
+            color: white;
+        }
+        .rainbow-button-4 {
+            background: linear-gradient(45deg, #2960E1, #ff4a28);
+            color: white;
+        }
+        .margin-bottom {
+            margin-bottom: 2em;
+        }
+        header {
+            width: 100%;
+            background-color: #444444;
+            padding: 1em 0;
+            text-align: center;
+            background: linear-gradient(45deg, #444444, #66fcf1);
+        }
+        header h1 {
+            color: #66fcf1;
+            margin: 0;
+        }
+        .ai-opinion {
+            width: 35%;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 1em;
+            margin-left: 2em;
+            text-align: center;
+        }
+        .ai-opinion h2 {
+            color: #66fcf1;
+            margin-top: 0;
+        }
+        .ai-opinion p {
+            color: #ffffff;
+            font-size: 1.1em;
+        }
+        .container {
+            position: relative;
+        }
+        .loading-dots {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Fashionmate</h1>
+    </header>
+    <div class="ai-opinion">
+        <p id="aiOpinionText">AI opinion will appear here based on your selection.</p>
+    </div>
+    
+    <div class="container">
+        <div class="box margin-bottom" onclick="window.location.href = 'top.html';">
+            <img id="topImage" src="plus_icon.png" alt="+">
+            <div class="box-text" id="topText">Top</div>
+        </div>
+        <div class="box margin-bottom" onclick="window.location.href = 'bottom.html';">
+            <img id="bottomImage" src="plus_icon.png" alt="+">
+            <div class="box-text" id="bottomText">Bottom</div>
+        </div>
+        <div class="box" onclick="window.location.href = 'outwear.html';">
+            <img id="outwearImage" src="plus_icon.png" alt="+">
+            <div class="box-text" id="outwearText">Outwear</div>
+        </div>
+        <div class="box" onclick="window.location.href = 'footwear.html';">
+            <img id="footwearImage" src="plus_icon.png" alt="+">
+            <div class="box-text" id="footwearText">Footwear</div>
+        </div>
+    </div>
+    <div id="loadingDots" class="loading-dots">
+        <div class="loader loader--9"></div>
+    </div>
+
+    <button class="button rainbow-button-1" onclick="searchOutfit('top')">Search Top</button>
+    <button class="button rainbow-button-2" onclick="searchOutfit('bottom')">Search Bottom</button>
+    <button class="button rainbow-button-3" onclick="searchOutfit('outwear')">Search Outwear</button>
+    <button class="button rainbow-button-4" onclick="searchOutfit('footwear')">Search Footwear</button>
+    <button class="button reset-button" onclick="resetAndGoBack()">Reset & Go Back</button>
+
+    <script>
+        // Retrieve the selected items from session storage
+        const selectedTop = JSON.parse(sessionStorage.getItem('selectedTop'));
+        const selectedBottom = JSON.parse(sessionStorage.getItem('selectedBottom'));
+        const selectedOutwear = JSON.parse(sessionStorage.getItem('selectedOutwear'));
+        const selectedFootwear = JSON.parse(sessionStorage.getItem('selectedFootwear'));
+
+        // Function to display selected item in respective box
+        function displaySelectedItem(imageId, textId, item) {
+            const img = document.getElementById(imageId);
+            const text = document.getElementById(textId);
+            if (item) {
+                img.src = item.image;
+                img.alt = item.name;
+            } else {
+                img.src = "plus_icon.png";
+                img.alt = "+";
+            }
+        }
+
+        // Display selected items in respective boxes
+        displaySelectedItem('topImage', 'topText', selectedTop);
+        displaySelectedItem('bottomImage', 'bottomText', selectedBottom);
+        displaySelectedItem('outwearImage', 'outwearText', selectedOutwear);
+        displaySelectedItem('footwearImage', 'footwearText', selectedFootwear);
+        
+                // Function to update AI opinion based on selected outfits
+                function updateAIOpinion(selectedTop, selectedBottom, selectedOutwear, selectedFootwear) {
+            const aiOpinionText = document.getElementById('aiOpinionText');
+
+            if (selectedTop && selectedBottom && selectedOutwear && selectedFootwear) {
+                aiOpinionText.innerText = "You've got a great outfit combination!";
+            } else {
+                aiOpinionText.innerText = "Complete your outfit by selecting all items.";
+            }
+        }
+
+        // Call the function to update AI opinion
+        updateAIOpinion(selectedTop, selectedBottom, selectedOutwear, selectedFootwear);
+
+        // Function to handle the search and open search results in a new tab
+        function searchOutfit(type) {
+            let searchQuery = '';
+            if (type === 'top' && selectedTop) {
+                searchQuery = `${selectedTop.name} for men`;
+            } else if (type === 'bottom' && selectedBottom) {
+                searchQuery = `${selectedBottom.name} for men`;
+            } else if (type === 'outwear' && selectedOutwear) {
+                searchQuery = `${selectedOutwear.name} for men`;
+            } else if (type === 'footwear' && selectedFootwear) {
+                searchQuery = `${selectedFootwear.name} footwear for men`;
+            }
+            if (searchQuery) {
+                window.open(`https://www.amazon.com/s?k=${encodeURIComponent(searchQuery)}`, '_blank');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Function to reset and go back to the index page
+        function resetAndGoBack() {
+            // Show loading dots
+            document.getElementById('loadingDots').style.display = 'block';
+
+            // Clear session storage after a slight delay (to give time for the loading dots to appear)
+            setTimeout(function() {
+                sessionStorage.clear();
+                window.location.href = 'index.html';
+            }, 1000); // Adjust the delay time as needed
+        }
+    </script>
+</body>
+</html>

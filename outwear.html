@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionmate Outwear Selection</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2em;
+        }
+        header {
+            width: 100%;
+            background-color: #444444;
+            padding: 1em 0;
+            text-align: center;
+            background: linear-gradient(45deg, #444444, #66fcf1);
+        }
+        header h1 {
+            color: #66fcf1;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 2em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 1em;
+        }
+        .grid-item {
+            background: #333333;
+            padding: 1em;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .grid-item img {
+            width: 100%;
+            max-width: 100px;
+            border-radius: 10px;
+        }
+        .grid-item .item-name {
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fashionmate</h1>
+    </header>
+    <div class="container">
+        <h2>Select an Outwear</h2>
+        <div class="grid">
+            <div class="grid-item" onclick="selectItem('anorak','https://i.postimg.cc/VkRkRfzY/anorak.png')">
+                <img src="https://i.postimg.cc/VkRkRfzY/anorak.png" alt="Anorak">
+                <div class="item-name">Anorak</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('balmacaancoat','https://i.postimg.cc/2yhzBmHN/balmacaancoat.png')">
+                <img src="https://i.postimg.cc/2yhzBmHN/balmacaancoat.png" alt="Balmacaan Coat">
+                <div class="item-name">Balmacaan Coat</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('blouson','https://i.postimg.cc/ZYdYQFJs/blouson.png')">
+                <img src="https://i.postimg.cc/ZYdYQFJs/blouson.png" alt="Blouson">
+                <div class="item-name">Blouson</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('caferacer','https://i.postimg.cc/g2kWGvPW/caferacer.png')">
+                <img src="https://i.postimg.cc/g2kWGvPW/caferacer.png" alt="Cafe Racer">
+                <div class="item-name">Cafe Racer</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('carcoat','https://i.postimg.cc/hjxF2sV9/carcoat.png')">
+                <img src="https://i.postimg.cc/hjxF2sV9/carcoat.png" alt="Car Coat">
+                <div class="item-name">Car Coat</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('chesterfieldcoat','https://i.postimg.cc/h4LWxCDn/chesterfieldcoat.png')">
+                <img src="https://i.postimg.cc/h4LWxCDn/chesterfieldcoat.png" alt="Chesterfield Coat">
+                <div class="item-name">Chesterfield Coat</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('chorejacket','https://i.postimg.cc/4NXC1zy9/chorejacket.png')">
+                <img src="https://i.postimg.cc/4NXC1zy9/chorejacket.png" alt="Chore Jacket">
+                <div class="item-name">Chore Jacket</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('collaredleatherjacket','https://i.postimg.cc/VLgxZd0H/collaredleatherjacket.png')">
+                <img src="https://i.postimg.cc/VLgxZd0H/collaredleatherjacket.png" alt="Collared Leather Jacket">
+                <div class="item-name">Collared Leather Jacket</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('cowichansweater','https://i.postimg.cc/prxSqHWH/cowichansweater.png')">
+                <img src="https://i.postimg.cc/prxSqHWH/cowichansweater.png" alt="Cowichan Sweater">
+                <div class="item-name">Cowichan Sweater</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('doublebreastedjacket','https://i.postimg.cc/Qx8P7hYg/doublebreastedjacket.png')">
+                <img src="https://i.postimg.cc/Qx8P7hYg/doublebreastedjacket.png" alt="Doublebreasted Jacket">
+                <div class="item-name">Doublebreasted Jacket</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('doublebreastedtopcoat','https://i.postimg.cc/Kv0WrwC6/doublebreastedtopcoat.png')">
+                <img src="https://i.postimg.cc/Kv0WrwC6/doublebreastedtopcoat.png" alt="Doublebreasted Topcoat">
+                <div class="item-name">Doublebreasted Topcoat</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('downjacket','https://i.postimg.cc/g25B1Rz4/downjacket.png')">
+                <img src="https://i.postimg.cc/g25B1Rz4/downjacket.png" alt="Down Jacket">
+                <div class="item-name">Down Jacket</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('gilet','https://i.postimg.cc/7hmK9Jt3/gilet.png')">
+                <img src="https://i.postimg.cc/7hmK9Jt3/gilet.png" alt="Gilet">
+                <div class="item-name">Gilet</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('leatherblazer','https://i.postimg.cc/7Yh9D6QR/leatherblazer.png')">
+                <img src="https://i.postimg.cc/7Yh9D6QR/leatherblazer.png" alt="Leather Blazer">
+                <div class="item-name">Leather Blazer</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('noragi','https://i.postimg.cc/DZ5Q3kQF/noragi.png')">
+                <img src="https://i.postimg.cc/DZ5Q3kQF/noragi.png" alt="Noragi">
+                <div class="item-name">Noragi</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('poncho','https://i.postimg.cc/GpxGvw5Y/poncho.png')">
+                <img src="https://i.postimg.cc/GpxGvw5Y/poncho.png" alt="Poncho">
+                <div class="item-name">Poncho</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('robecoat','https://i.postimg.cc/HxW52ZqN/robecoat.png')">
+                <img src="https://i.postimg.cc/HxW52ZqN/robecoat.png" alt="Robe Coat">
+                <div class="item-name">Robe Coat</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('safarijacket','https://i.postimg.cc/kGBSrVXF/safarijacket.png')">
+                <img src="https://i.postimg.cc/kGBSrVXF/safarijacket.png" alt="Safari Jacket">
+                <div class="item-name">Safari Jacket</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('sportjacket','https://i.postimg.cc/3w10djkF/sportjacket.png')">
+                <img src="https://i.postimg.cc/3w10djkF/sportjacket.png" alt="Sport Jacket">
+                <div class="item-name">Sport Jacket</div>
+            </div>
+            <div class="grid-item" onclick="selectItem('trenchcoat','https://i.postimg.cc/Kcwkk88w/trenchcoat.png')">
+                <img src="https://i.postimg.cc/Kcwkk88w/trenchcoat.png" alt="Trench Coat">
+                <div class="item-name">Trench Coat</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function selectItem(itemName, itemImage) {
+        const selectedItem = { name: itemName, image: itemImage };
+        sessionStorage.setItem('selectedOutwear', JSON.stringify(selectedItem));
+        window.location.href = 'final.html';
+    }
+        function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Set the selected top image
+    var selectedTopImageURL = getUrlParameter('selectedTopImage');
+    if (selectedTopImageURL) {
+        document.getElementById('selectedTopImage').src = selectedTopImageURL;
+    }
+    </script>
+</body>
+</html>
