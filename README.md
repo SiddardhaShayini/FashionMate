@@ -16,4 +16,6 @@ All project files are located in the root directory:
 - **Integrated Development Environment (IDE)**: Visual Studio Code
 - **Internet Requirement**: An active internet connection is required for running and testing the project.
 
-
+## Usage
+- Open all project files in Visual Studio Code (VS Code).
+- Run 'index.html' to view and test the application.
