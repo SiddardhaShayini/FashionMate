@@ -12,10 +12,15 @@ All project files are located in the root directory:
 ## Requirements
 - **Programming Languages**: HTML5, CSS3, JavaScript
 - **Backend Framework**: Node.js with Express
-- **Operating System**: Windows 8 or later
+- **Operating System**: Windows 7 or later
 - **Integrated Development Environment (IDE)**: Visual Studio Code
 - **Internet Requirement**: An active internet connection is required for running and testing the project.
 
+## Installation
+- **Clone the repository**: https://github.com/SiddardhaShayini/FashionMate.git
+- **Navigate to the project directory**: cd Fashiomate
+- **Install dependencies**: npm install
+
 ## Usage
 - Open all project files in Visual Studio Code (VS Code).
-- Run 'index.html' to view and test the application.
+- Run 'index.html' using the Live Server extension in VS Code or open 'index.html' directly in a web browser to view the application.
